@@ -9,3 +9,4 @@ sqlparse
 tzdata
 whitenoise
 pymongo
+djongo
