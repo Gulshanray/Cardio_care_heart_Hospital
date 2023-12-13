@@ -81,16 +81,20 @@ DATABASES = {
     }
 }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'gulshan',  # Replace with your PostgreSQL database name
-#         'USER': 'admin',    # Replace with your PostgreSQL username
-#         'PASSWORD': 'gulshankumar',  # Replace with your PostgreSQL password
-#         'HOST': 'gulshan.cxwmvi1qpasx.ap-south-1.rds.amazonaws.com',
-#         'PORT': '3306',     # PostgreSQL default port
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'djongo',
+        'ENFORCE_SCHEMA': False,
+        'NAME': 'hospital',
+        'CLIENT': {
+            'host': 'mongodb+srv://bubugulshan509:hospital@hospital.xbznvgs.mongodb.net/?retryWrites=true&w=majority',
+            'username': 'bubugulshan509',
+            'password': 'hospital',
+            'authSource': 'admin',
+            'authMechanism': 'SCRAM-SHA-1',
+        }
+    }
+}
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
