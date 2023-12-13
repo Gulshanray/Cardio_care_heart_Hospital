@@ -8,3 +8,4 @@ pytz
 sqlparse
 tzdata
 whitenoise
+pymongo
