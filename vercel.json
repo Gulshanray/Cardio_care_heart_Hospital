@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "functions": {
+      "api": {
+        "handler": "hospital/wsgi.handler",
+        "runtime": "@vercel/python"
+      }
+    },
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/hospital/wsgi.py"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/hospital/wsgi.py"
+      }
+    ]
+  }
+  
