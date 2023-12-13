@@ -9,4 +9,4 @@ sqlparse
 tzdata
 whitenoise
 pymongo
-djongo==1.3.5
+djongo
