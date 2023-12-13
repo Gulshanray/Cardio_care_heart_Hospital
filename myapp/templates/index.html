@@ -1,0 +1,475 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
+    
+    <title>Cardio_care_heart_Hospital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/js/bootstrap-datepicker.min.js"></script> 
+<link rel="stylesheet" href="static/css/style.css">
+
+
+</head>
+  <body>
+    
+
+
+    <header id="home">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 border-bottom fixed-top">
+          <div class="container-fluid">
+            <img src="{% static 'image/cardiology.png' %}" height="100px" alt=""><a class="navbar-brand fs-2 col-sm-12 col-md-6 col-lg-4 col-12" href="#"> CardioCare <span class="text-primary">Heart Hospital</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto  mb-lg-0 fs-5 text-center">
+                <li class="nav-item">
+                  <a class="nav-link active text-primary" aria-current="page" href="#home">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">About</a>
+                </li>
+               
+                  <li class="nav-item">
+                    <a class="nav-link" href="#services">Services</a>
+                  </li>
+                
+                <li class="nav-item">
+                  <a class="nav-link" href="#appointment">Appointment</a>
+                  <li class="nav-item">
+                <li class="nav-item">
+                  <a class="nav-link" href="#team">Our Doctors</a>
+                  
+                <li class="nav-item">
+                  <a class="nav-link" href="#contact">Feedback</a>
+                </li>
+                
+              </ul>
+              
+            </div>
+          </div>
+        </nav>
+
+
+
+
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+
+        </div>
+        <div class="carousel-inner">
+            {% for i in data %}
+          <div class="carousel-item {% if forloop.counter0 == 0 %} active  {% endif %}">
+            <img src="{{i.docu.url}}" style="height: 700px;" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h4 style="color: black;">{{i.title}}</h4>
+              <p><h4 style="color: black;">{{i.sub_title}}</h4></p>
+            </div>
+          </div>
+          {% endfor %}
+          
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+
+  </header>
+  <section class="about" style="padding-top: 150px;" id="about">
+      <div class="container">
+          <div class="text-center">
+          <h1 data-aos="fade-up" data-aos-offset="200" >About <span class="text-primary"> us</span></h1>
+          <hr  class="w-25 m-auto"/>
+        </div>
+
+          <div class="row">
+            <div class="col-sm-12 col-md-6 my-5 col-lg-6 col-12" data-aos="zoom-in" data-aos-offset="200">
+                <h1>What do you <span class="text-primary">want to know?</span></h1>
+                <p class="p-2">Welcome to Heart Hospital, where we prioritize your heart health and well-being above all else. At Heart Hospital, we understand the vital role your heart plays in your life, and we are committed to providing exceptional care and support to our patients. </p>
+                
+
+
+                <div class="accordion" id="accordionExample" data-aos="zoom-in-left" data-aos-offset="200">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                         <i class="fa fa-ambulance"></i>&nbsp; Ambulance Service
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>"Swift and Reliable Ambulance Services: Your Lifeline in Emergencies"</strong> When every second counts, trust in the rapid response and life-saving care provided by our Ambulance Services. At our organization, we understand the critical role that swift and efficient ambulance services play in emergency situations. 
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                         <i class="fa fa-bed "></i>&nbsp; Emergency Service
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>"Rapid and Reliable Emergency Services: Your Trusted Response Team in Times of Crisis"</strong>  When every second counts, trust in our Emergency Services, the dedicated team that stands ready to respond to any crisis. At our organization, we understand the urgency and critical nature of emergency situations, and we are committed to providing swift and efficient assistance when you need it most.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <i class="fa fa-stethoscope"></i>&nbsp;  Free Checkup
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                          <strong>"Promoting Health and Wellness: Avail Free Checkups for a Brighter Tomorrow"</strong> At "CardioCare Heart Hospital", we believe that access to quality healthcare should be available to all. That's why we are proud to offer free checkups as part of our commitment to promoting health and wellness in our community.                 </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 col-12 m-auto text-end" data-aos="fade-up-right" data-aos-offset="200">
+              <img src="{% static 'image/HIMS-1.webp' %}" height="500px" width="500px" class="img-fluid img-thumnail" alt="">
+               
+              
+            </div>
+
+        </div>
+      </div>
+                
+
+  </section>
+  <section class="services bg-light" style="padding-top: 100px;" id="services">
+<div class="container">
+<div class="text-center my-5">
+    <h1 data-aos="fade-up" data-aos-offset="200" >Our <span class="text-primary"> Services</span></h1>
+    <hr / class="w-25 m-auto">
+</div>
+
+<div class="row" data-aos="zoom-in-up" data-aos-offset="200">
+
+<div class="row">
+  {% for j in data1 %}
+  <div class="col-lg-4 col-md-6">
+    <div class="single-feature mb-30">
+      <div class="title d-flex flex-row  pb-20">
+        <span class="lnr lnr-user"></span>
+        <!-- <a href="{{j.docu.url}}"></a> -->
+        
+        <img src="{{j.docu.url}}" style="height: 340px; width: 350px; border: 1px solid;"  alt="">
+      </div>
+      <p><h5 class="text-dark ps-5">{{j.title}}</h5></p>
+      <p class="text-dark ps-2">{{j.sub_title}}</p>
+
+    </div>
+  </div>
+  {% endfor %}
+</div>
+</div>
+</div>
+  </section>
+
+ <!-- appointment start..............................  -->
+ <section class="contact" style="padding-top: 100px;" id="appointment">
+<div class="container">
+<div class="text-center my-5">
+    <h1 data-aos="fade-up" data-aos-offset="200">Make <span class="text-primary"> Appointment </span> Now</h1>
+    <hr / class="w-25 m-auto">
+</div>
+<div class="row">
+
+<div class="col-sm-12 col-md-6 col-lg-6 col-12 m-auto text-end p-4" data-aos="fade-up-left" data-aos-offset="200">
+      <!-- <img src="https://img.freepik.com/free-vector/call-doctor-concept-doctors-answer-patient-questions-phone_1150-50289.jpg?w=1380&t=st=1688546872~exp=1688547472~hmac=e60aefd82f516f6c0f56fec893e562de5917be3bc0c0a5d1fa1883442e7971cb" class="img-fluid img-thumbnail p-2 "> -->
+       <!-- <img src="https://kanawadehospital.com/wp-content/uploads/2020/09/appointment.png" class="img-fluid img-thumbnail p-2 "alt=""> -->
+       <img src="https://cdn.fullestop.com/mobile-site/images/doctor-appointment.svg" class="img-fluid img-thumbnail p-2 "alt="">
+
+    
+    </div>
+
+    <div class="col-sm-12 col-md-6 col-lg-6 col-12" data-aos="fade-up-right" data-aos-offset="200">
+
+
+<form action="appoint" method="post">
+{% csrf_token %}
+<div class="mb-3">
+<label  class="form-label">Your Name</label>
+<input type="text" class="form-control" id="text" name="fname" required>
+</div>
+<div class="mb-3">
+<label  class="form-label">Your Address</label>
+<input type="text" class="form-control" id="text" name="faddress">
+</div>
+<div class="mb-3">
+<label class="form-label">Email address</label>
+<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+</div>
+<div class="mb-3">
+<label" class="form-label">Your Age</label>
+<input type="text" class="form-control" id="text" name="age">
+</div>
+
+<div class="mb-3">
+<label  class="form-label">Date</label>
+
+  <input type="date" class="form-control" id="date" name="Date"/>
+</div> 
+
+<button type="submit" class="btn btn-primary"  value = 'save'>Appointment Now</button>
+</form><br>
+
+</div>
+</div>
+</div>
+
+  </section>
+  <!-- Appontment.....end -->
+
+
+
+
+          
+
+<section class="team  text-center" style="padding-top: 100px;" id="team">
+  <div class="container">
+      <div class="text-center my-5">
+          <h1 data-aos="fade-up" data-aos-offset="200" >Our <span class="text-primary"> Doctors</span></h1>
+          <hr / class="w-25 m-auto">
+      </div>
+      <div class="row" data-aos="zoom-in-up" data-aos-offset="200">
+      
+    <!-- doctors images start -->
+
+    <div class="row ">
+      {% for k in data2 %}
+      <div class="col-lg-4 col-md-6 col-12">
+        <div class="single-feature mb-30">
+          <div class="title d-flex flex-row  pb-20">
+            <span class="lnr lnr-user"></span>
+            <img src="{{k.docu.url}}" style="height: 340px; width: 350px; border: 1px solid;"   alt="">
+          </div>
+          <p><h3 class="text-primary">{{k.title}}</h3></p>
+          <p><h5 class="text-dark">{{k.sub_title}}</h5></p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- doctors images end -->
+
+
+
+
+    
+      
+  </div>
+  </div>
+        </section>
+  
+
+  <section class="contact" style="padding-top: 100px;" id="contact">
+<div class="container">
+<div class="text-center my-5">
+    <h1 data-aos="fade-up" data-aos-offset="200">Feel free <span class="text-primary"> to Connect</span></h1>
+    <hr  class="w-25 m-auto"/>
+</div>
+<div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-6 col-12" data-aos="fade-up-left" data-aos-offset="200">
+        <form class="row g-3" action="contactus" method="post">
+          {% csrf_token %}
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Email</label>
+              <input type="email" class="form-control" name="email" id="inputEmail4">
+            </div>
+            <div class="col-md-6">
+              <label for="" class="form-label">Phone No</label>
+              <input type="" name="phone" class="form-control" id="inputPassword4">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">Address</label>
+              <input type="text" name="address" class="form-control" id="inputAddress">
+            </div>
+            
+            <div class="col-md-6">
+              <label for="inputCity" class="form-label">City</label>
+              <input type="text" name="city" class="form-control" id="inputCity">
+            </div>
+            <div class="col-md-4">
+              <label for="inputState" class="form-label">State</label>
+              
+              <input type="text" name="state" class="form-control" id="inputCity">
+
+            </div>
+            <div class="col-md-2">
+              <label for="inputZip" class="form-label">Pin</label>
+              <input type="text" name="zip"  class="form-control" id="inputZip">
+            </div>
+           
+
+           <!-- details-----------------------------------------------------------------------------------  -->
+
+              <div class="col-12">
+               <label for="inputAddress" class="form-label">Details</label>
+              <textarea class="form-control" name="details" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                          
+
+
+                          
+
+
+            <div class="col-12">
+              <button type="submit" name="save" class="btn btn-primary">Feedback</button>
+            </div>
+          </form>
+          <br>
+        
+    </div>
+    <div class="col-sm-12 col-md-6 col-lg-6 col-12 m-auto text-end p-4" data-aos="fade-up-right" data-aos-offset="200">
+      <img src="https://ezovion.com/wp-content/uploads/2023/01/MicrosoftTeams-image-10.png" class="img-fluid img-thumbnail p-2 ">
+
+    </div>
+
+</div>
+</div>
+
+  </section>
+
+  <section>
+    <!-- Footer -->
+<footer class="page-footer font-small blue pt-4">
+
+<!-- Footer Links -->
+<div class="container-fluid text-white text-center text-md-left" style="background-color: cornflowerblue;">
+
+<!-- Grid row -->
+<div class="row">
+
+  <!-- Grid column -->
+  <div class="col-md-6 mt-md-0 mt-3">
+
+    <!-- Content -->
+    <h5 class="text-uppercase my-3">Hospital Location :</h5>
+   
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13778.923792585785!2d78.0133615!3d30.3017202!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39092a2e966fe125%3A0x93353bda68fc0406!2sNSTI%20(National%20Skill%20Training%20Institute)%20Dehradun!5e0!3m2!1sen!2sin!4v1688550351645!5m2!1sen!2sin"  height="250"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="col-sm-12 col-md-10 col-lg-12 col-12"></iframe>
+
+  </div>
+  <!-- Grid column -->
+
+  <hr class="clearfix w-100 d-md-none pb-3">
+
+  <!-- Grid column -->
+  <div class="col-md-3 mb-md-0 mb-3">
+
+    <!-- Links -->
+    <h5 class="text-uppercase my-3">Address :</h5>
+
+    <ul class="list-unstyled text-white my-5">
+      <li>
+        <!-- <a href="#!">Link 1</a> -->
+        <p>Majra, Green Park, Niranjanpur</p>
+      </li>
+      <li>
+        <p>Dehradun</p>
+
+        <!-- <a href="#!">Link 2</a> -->
+      </li>
+      <li>
+        <p>Uttrakhand</p>
+
+        <!-- <a href="#!">Link 3</a> -->
+      </li>
+      <li>
+        <p>248171</p>
+
+        <!-- <a href="#!">Link 4</a> -->
+      </li>
+    </ul>
+
+  </div>
+  <!-- Grid column -->
+
+  <!-- Grid column -->
+  <div class="col-md-3 mb-md-0 mb-3">
+
+    <!-- Links -->
+    <h5 class="text-uppercase my-3">CONTACT :</h5>
+
+    <ul class="list-unstyled my-5">
+      <li>
+        <p>09:00 AM to 05:00 PM</p>
+        <!-- <a href="#!">Link 1</a> -->
+      </li>
+      <li>
+        <p>Contact No : +91- 9400112233</p>
+        <!-- <a href="#!">Link 2</a> -->
+      </li>
+      <li>
+        <p>Toll Free NO : 1800 1111 00</p>
+        <!-- <a href="#!">Link 3</a> -->
+      </li>
+      <li>
+        <p>Webseite:- www.cardiocarehelth.com</p>
+        <!-- <a href="#!">Link 4</a> -->
+      </li>
+    </ul>
+
+  </div>
+  <!-- Grid column -->
+
+</div>
+<!-- Grid row -->
+
+</div>
+<!-- Footer Links -->
+
+<!-- Copyright -->
+<div class="footer-copyright text-center py-3 fs-4">Team Member : Aprajita Singh, Prabhash Kumar, Mukesh Nirmal, Ramakant Prajapati
+
+</div>
+<!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+  </section>
+
+<!-- Optional JavaScript; choose one of the two! -->
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>
+
+ 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="static/js/style.js"></script>
+    
+  
+  </body>
+</html>

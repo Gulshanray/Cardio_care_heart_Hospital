@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Cardio_care_heart_Hospital</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<style>
+  @media print
+  {
+    .btn
+    {display: none;}
+    .noprint{
+      display: none;
+    }
+  }
+
+</style>
+
+<script>
+  function getprint(){
+    window.print();
+  }
+</script>
+
+</head>
+<body style="border: 2px solid rgb(8, 8, 8);">
+    <section>
+     <!-- As a heading -->
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+    
+      <img src="{% static 'image/cardiology.png' %}" height="100px" alt=""><h3 class="navbar-brand fs-2"> CardioCare <span class="text-primary">Heart Hospital</span></h3>
+
+    </div>
+  </nav>
+  <div class="border"></div> 
+    </section>
+    
+
+    <P><h6 class="noprint text-primary" >Welcome to CardioCare Heart Hospital</h6>
+    
+    <h6 class="noprint">Your details are successfully submitted and appointment have been fixed.<button class="btn btn-primary ms-5"><a href="/" class="noprint  text-white " style="text-decoration: none;">Click this for back to home</a></button> </h6> <h6></h6></P>
+    <p class="noprint"> Please print your slip for Future reference.&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-primary" onclick="getprint()">print</button></p>
+    
+
+    <section>
+      <form action="" method = "post">
+        {% csrf_token %}
+      <h6>&nbsp;TOKEN NO :{{j.id}}</h6>
+      <h6>&nbsp;Clinic : Cardiology</h6>
+      <h6>&nbsp;Days : MON, SAT</h6>
+      <h6>&nbsp;Time : 09:00 AM - 05:00 PM</h6>
+
+    
+    <div class="border"></div>
+    
+      <div style="text-align: center;">
+        <h5>OUT PATIENT RECORD</h5>
+      </div>
+      <div>&nbsp; Name : {{j.yourname}} </div>
+      <div>&nbsp; Department : Cardiology</div>
+      <div>&nbsp; Your Age :{{j.yourage}}</div>
+      <div>&nbsp; Email Address : {{j.emailaddress}}</div>
+      <div>&nbsp; Your Address : {{j.youraddress}}</div>
+      <div>&nbsp; Date : {{j.Date}}</div>
+      <div>&nbsp; fee :</div><br>
+    </form>
+    </section>
+    <div class="border"></div>
+    <section> <br> <br>
+      <div>&nbsp; Date and Time of initial assessment :</div><br>
+      <div>&nbsp; Clinical History :</div><br>
+      <div>&nbsp; Examnation Findings :</div><br>
+      <div>&nbsp; Investigation :</div><br>
+      <div>&nbsp; Diagnosis :</div><br>
+      <div>&nbsp; Trearment :</div><br>
+      <div>&nbsp; Follow-up advice :</div><br>
+      <p class="text-end">Doctor's Name &nbsp;&nbsp; <br>  Signature/Date &nbsp;&nbsp;</p>
+    </section>
+   
+
+</body>
+</html>

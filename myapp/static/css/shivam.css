@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+   
+}
+
+
+
+body{
+    font-size: 'poppins', sans-serif;
+    
+}
+.container{
+    height: 100%;
+  
+  background: url("kisspng-hospital-information-system-health-administration-hospital-staff-cartoon-5b55776b927ba8.3976408515323277876.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.box-area{
+    width: 930px;
+}
+.error {
+    background: #f2dede;
+    color: #a94442;
+    padding: 10px;
+    width: 95%;
+    border-radius: 5px;
+}

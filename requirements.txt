@@ -1,0 +1,10 @@
+asgiref
+dj-database-url
+Django
+django-environ
+gunicorn
+psycopg2-binary
+pytz
+sqlparse
+tzdata
+whitenoise
