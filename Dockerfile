@@ -16,6 +16,7 @@ COPY . /django
 COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 RUN pip install djongo
+RUN python -m pip install "pymongo[srv]"
 
 # The following lines are moved to CMD
 # RUN python /django/manage.py makemigrations
