@@ -28,9 +28,9 @@ RUN pip install djongo pymongo
 # Copy the entire project to the working directory
 COPY . .
 
-# Run migrations
-RUN python manage.py makemigrations
-RUN python manage.py migrate
+# # Run migrations
+# RUN python manage.py makemigrations
+# RUN python manage.py migrate
 
 # Expose port 8000 for the Django development server
 EXPOSE 8000
