@@ -94,6 +94,7 @@ DATABASES = {
             'password': 'hospital',
             'authSource': 'admin',
             'authMechanism': 'SCRAM-SHA-1',
+            
         }
     }
 }
