@@ -143,7 +143,7 @@ STATICFILES_DIRS=[BASE_DIR,'static']
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
-EMAIL_HOST_USER = 'pk786.1993@gmail.com' # sender mail
-EMAIL_HOST_PASSWORD = 'tbnepvxmuekleocq'   #App password
+EMAIL_HOST_USER = 'bubugulshan509@gmail.com' # sender mail
+EMAIL_HOST_PASSWORD = 'chzy qhxh bnlz smho'   #App password
 EMAIL_USE_TLS=True
 
