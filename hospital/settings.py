@@ -82,6 +82,7 @@ WSGI_APPLICATION = 'hospital.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
+import djongo
 
 DATABASES = {
     'default': {
