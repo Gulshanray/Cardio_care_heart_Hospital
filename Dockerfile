@@ -1,15 +1,7 @@
-# FROM python:3
-# WORKDIR /django
-# COPY requirements.txt requirements.txt
-# RUN pip install -r requirements.txt
-# RUN pip install djongo 
-# RUN pip install  pymongo
-# RUN  python manage.py makemigrations
-# RUN python manage.py  migration
+
 
 
 FROM python:3
-
 WORKDIR /django
 COPY . /django
 
