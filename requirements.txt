@@ -10,4 +10,4 @@ tzdata
 whitenoise
 pymongo
 gunicorn
-django-mongodb-engine
+
