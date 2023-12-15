@@ -1,4 +1,5 @@
 Django
+djongo
 dj-database-url
 django-environ
 gunicorn
