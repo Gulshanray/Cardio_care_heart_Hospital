@@ -86,7 +86,7 @@ WSGI_APPLICATION = 'hospital.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django_mongodb_engine',
+        'ENGINE': 'django',
         'ENFORCE_SCHEMA': False,
         'NAME': 'hospital',
         'CLIENT': {
