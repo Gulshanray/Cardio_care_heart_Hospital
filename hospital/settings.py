@@ -86,17 +86,8 @@ WSGI_APPLICATION = 'hospital.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django',
-        'ENFORCE_SCHEMA': False,
-        'NAME': 'hospital',
-        'CLIENT': {
-            'host': 'mongodb+srv://bubugulshan509:hospital@hospital.xbznvgs.mongodb.net/?retryWrites=true&w=majority',
-            'username': 'bubugulshan509',
-            'password': 'hospital',
-            'authSource': 'admin',
-            'authMechanism': 'SCRAM-SHA-1',
-            
-        }
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 # Password validation
