@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-gor(dk_z!v7x!!2lcp@eyeut#w6rq2h%s!$cssz4g-foax*@x#
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-ALLOWED_HOSTS = ['cardio-care-heart-hospital.onrender.com', "*"]
+ALLOWED_HOSTS = ['cardio-care-heart-hospital.onrender.com']
 
 # ALLOWED_HOSTS = ["*"]
 
