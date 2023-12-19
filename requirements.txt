@@ -10,4 +10,7 @@ tzdata
 whitenoise
 pymongo
 gunicorn
+psycopg2
+dj-database-url
+ 
 
