@@ -26,7 +26,7 @@ SECRET_KEY=os.environ.get("SECRET_KEY")
 DEBUG = os.environ.get("DEBUD" , "False").lower() == "true"
 # ALLOWED_HOSTS = ['cardio-care-heart-hospital.onrender.com']
 
-ALLOWED_HOSTS =os.environ.get("ALLOWED_HOST").split("")
+ALLOWED_HOSTS =os.environ.get("ALLOWED_HOSTS").split("")
 
 
 
